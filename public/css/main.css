@@ -1,0 +1,1370 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+/*Первый блок*/
+
+.main-content {
+    flex: 1;
+    background: #EA6565 url('slide-1.png') no-repeat center center;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.main-title {
+    color: white;
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+
+/*Зеленый блок слева*/
+
+.sidebar {
+  position: fixed;         
+  top: 0;
+  right: 0;
+  height: 100vh;            
+  width: 25%;
+  min-width: 260px;
+  background-color: #00cc44;
+  z-index: 999;             
+  
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 60px 25px 40px 50px; 
+  box-sizing: border-box;
+  
+  
+  transform: translateX(100%); 
+  transition: transform 0.4s ease; 
+}
+
+
+.sidebar.active {
+  transform: translateX(0);  
+}
+
+.close-menu {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+
+.menu-item {
+    background-color: white;
+    color:#333333;
+    padding: 10px;
+    text-align: left;
+
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    position: relative;
+    align-self: flex-end;
+}
+
+.sidebar-image {
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: auto;
+    transform: rotate(8deg);
+
+    align-self: center;
+    width: 85%;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.gif-content {
+  width: 100%;              
+  height: auto;              
+  display: block;            
+  border-radius: 6px;        
+  object-fit: cover;        
+}
+
+.size-l {
+    width: 100%;
+    
+}
+.size-s{
+    width: 75%;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+
+/*Второй блок*/
+
+.second-screen {
+  position: relative;        
+  display: flex;
+  justify-content: center;
+  align-items: center;       
+  padding: 60px 40px;        
+  box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+}
+
+.card {
+    background-color: #dedede; 
+    color: #000000;
+    border-radius: 4px; 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-size: 1.2rem; 
+    font-weight: 500;
+  
+    display: flex !important;
+    
+    justify-content: center !important; 
+    align-items: center !important;     
+    text-align: center !important;     
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  background-color: #efefef; 
+  transform: scale(1.02);   
+  
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.about-card {
+    grid-row: span 2;  
+}
+
+.photo-card {
+  font-size: 1.2rem;        
+  letter-spacing: 1px;      
+  cursor: pointer;         
+}
+
+
+
+.burger-menu {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;                  /* Расстояние между полосками */
+  padding: 10px;
+
+  z-index: 900;
+}
+
+/* Полоски внутри бургера */
+.burger-menu span {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: #ffffff; 
+  border-radius: 2px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); 
+}
+
+.page-section {
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Третий блок */
+
+
+.third-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;       
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+.grid-container-beer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  grid-template-rows: 1fr 1fr; 
+  
+  gap: 30px;                 
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;              
+
+}
+
+
+.beer-block{
+  grid-row: 1 / span 2; 
+  grid-column: 3; 
+  max-width: 700px;          /* ширина по вашему макету */
+  margin: 0 auto;            /* центрирует сам блок по горизонтали */
+  padding: 30px 25px;
+  background-color: #dedede; 
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+.beer-card h3 {
+  font-size: 22px;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  color: #b45f2b;            /* пивной акцент */
+  text-align: left; 
+}
+
+
+/* Четвертый блок */
+
+.fourth-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+/* Контейнер для карточек */
+.flex-container-promo {
+  display: flex;            
+  gap: 30px;                
+  width: 100%;
+  max-width: 1200px;         
+  height: 80vh;             
+}
+
+
+.promo-card {
+  flex: 1;                   
+  background-color: #dedede;
+  color: #000000;
+  border-radius: 4px;
+  padding: 30px;            
+  box-sizing: border-box;
+  
+
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Пятый блок */
+
+footer.page-section.page-bg-5.fifth-screen {
+  background-color: #6ed1b2;
+  height: 25vh;             
+  min-height: 150px;
+  scroll-snap-align: end;    
+  
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  padding: 20px 40px;        
+  box-sizing: border-box;
+  overflow: hidden;          
+}
+
+.grid-container-footer,
+.flex-container-footer {
+  display: flex !important; 
+  flex-direction: row !important; 
+  justify-content: space-between;
+  gap: 30px;                 
+  
+  width: 100%;        
+  max-width: 1200px;         
+  height: 100%;              
+  box-sizing: border-box;
+}
+
+
+.footer-card {
+  background-color: #dedede; 
+  color: #000000;
+  border-radius: 4px;
+  padding: 20px;             
+  box-sizing: border-box;        
+  height: 100% !important;   
+  aspect-ratio: 1 / 1 !important; 
+  flex-shrink: 0;            
+  
+  
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;      
+}
+
+
+/*Форма вход/регистрация */
+
+/* Темный полупрозрачный фон на весь экран */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Затемнение заднего плана */
+  z-index: 1000;          /* Поверх зеленого меню и бургера */
+  display: none;          /* Изначально окно полностью скрыто */
+  justify-content: center;
+  align-items: center;    /* Центрируем красное окно строго по центру */
+}
+
+/* Красное окно из вашего макета */
+.modal-box {
+  background-color: #f06a6a; /* Красный цвет как на картинке */
+  width: 90%;
+  max-width: 500px;       /* Ограничение ширины */
+  padding: 40px;
+  border-radius: 4px;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Заголовок внутри окна */
+.modal-title {
+  color: #ffffff;
+  margin: 0 0 30px 0;
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+/* Контейнер формы */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;              /* Расстояние между полями ввода */
+}
+
+/* Серые поля ввода (Логин, Пароль) */
+.auth-input {
+  background-color: #dedede; /* Серый цвет из макета */
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  color: #333333;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Кнопка подтверждения внизу формы */
+.auth-submit-btn {
+  background-color: #dedede;
+  border: none;
+  padding: 12px;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: auto;
+  align-self: center;     /* Центрируем кнопку по ширине формы */
+  padding-left: 40px;     /* Делаем её прямоугольной как на макете */
+  padding-right: 40px;
+}
+
+/* Ссылка-переключатель под формой */
+.switch-mode-text {
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+#switch-mode-link {
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#switch-mode-link:hover {
+  opacity: 1;
+}
+
+/* Крестик для закрытия */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Класс-помощник для скрытия элементов */
+.auth-input.hidden {
+  display: none;
+}
+
+
+.account-page-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f06a6a; /* Красный фон из макета */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;          /* Запрещаем появление полос прокрутки */
+}
+
+/* 2. Левая часть: Стрелка, заголовок и история баллов */
+.account-left {
+  flex: 1.3;                 /* Левая часть по макету шире */
+  padding: 60px 40px;
+  position: relative;        /* Нужно для абсолютного позиционирования стрелки назад */
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Центрируем всю историю по горизонтали */
+  box-sizing: border-box;
+}
+
+/* 3. Правая часть: Вертикальное меню профиля */
+.account-right {
+  flex: 1;                   /* Правая часть под меню чуть уже */
+  padding: 80px 60px;        /* Хорошие отступы сверху и справа */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;     /* Прижимаем элементы меню к ПРАВОМУ краю */
+  gap: 25px;                 /* Расстояние между пунктами меню */
+  box-sizing: border-box;
+}
+
+/* 4. Белая стрелка "назад" в левом верхнем углу */
+.back-link {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  color: #ffffff;            /* Белый цвет */
+  font-size: 3rem;           /* Крупная стрелка */
+  text-decoration: none;     /* Убираем стандартное подчеркивание ссылки */
+  line-height: 1;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.7;              /* Легкое затухание при наведении */
+}
+
+/* 5. Текст "Система лояльности" над заголовком */
+.loyalty-title {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+/* 6. Крупный заголовок "окно историй баллов" */
+.history-main-title {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  font-weight: normal;       /* Не жирный, как на макете */
+  margin: 0 0 45px 0;
+  text-align: center;
+}
+
+/* 7. Контейнер для списка операций */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;                 /* Расстояние между белыми плашками */
+  width: 100%;
+  max-width: 500px;          /* Ограничение максимальной ширины плашек */
+}
+
+/* 8. Белые плашки истории (зачисление, списание) */
+.history-item {
+  background-color: #dedede; /* Светло-серый цвет плашек */
+  color: #000000;
+  padding: 18px;             /* Внутренние отступы, чтобы плашка была объемной */
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  border-radius: 4px;        /* Легкое скругление углов */
+  text-align: center;        /* Текст строго по центру плашки */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Мягкая тень для объема */
+}
+
+/* 9. Пункты меню в правой части */
+.account-menu-item {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.account-menu-item:hover {
+  opacity: 1;                /* Становятся ярче при наведении */
+  transform: translateX(-3px); /* Легкий сдвиг влево при наведении */
+}
+
+/* Имя пользователя (верхний пункт) */
+.account-menu-item.user-name {
+  font-size: 1.5rem;
+  font-weight: bold;         /* Выделяем логин жирным */
+  opacity: 1;
+  cursor: default;           /* Обычный курсор, так как это не кнопка */
+}
+
+.account-menu-item.user-name:hover {
+  transform: none;           /* Логин при наведении не двигается */
+}
+
+/* Кнопка "Выйти из аккаунта" */
+.account-menu-item.logout-btn {
+  background-color: #000000; /* Черная кнопка, чтобы выделялась */
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 20px;       /* Округлая кнопка */
+  font-size: 1.1rem;
+  margin-top: 30px;
+  opacity: 0.9;
+  align-self: flex-end;      /* Выравниваем по правому краю */
+}
+
+.account-menu-item.logout-btn:hover {
+  background-color: #222222;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   ФИНАЛЬНЫЕ СТИЛИ СХЕМЫ ЗАЛА (ЕДИНЫЙ ЦВЕТ, ОБВОДКА И УВЕЛИЧЕННЫЙ МАСШТАБ)
+   ========================================================================== */
+
+/* Главный контейнер страницы (на весь экран) */
+.booking-page-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f06a6a;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Светлая полупрозрачная серая подложка для схемы */
+.hall-plate-wrapper {
+  background-color: rgba(210, 210, 210, 0.4); 
+  backdrop-filter: blur(5px); 
+  /* ИСПРАВЛЕНО: сбалансированные отступы, чтобы схема раскрылась шире */
+  padding: 40px 50px;        
+  border-radius: 12px;       
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Главная сетка схемы зала */
+.hall-grid-scheme {
+  display: grid;
+  grid-template-columns: repeat(3, max-content); 
+  grid-template-rows: repeat(2, max-content);
+  /* ИСПРАВЛЕНО: увеличили зазоры между столами для большего масштаба */
+  column-gap: 120px; 
+  row-gap: 65px; 
+}
+
+.bar-counter-group, .big-table {
+  justify-self: center;
+  align-self: center;
+}
+
+/* --------------------------------------------------------------------------
+   ЕДИНЫЙ СТИЛЬ ДЛЯ ВСЕХ СТОЛИКОВ И МЕСТ
+   -------------------------------------------------------------------------- */
+.table-style {
+  background-color: #6f7a71; /* Ваш фирменный цвет заливки */
+  border: 2px solid #ffffff; /* Аккуратная белая обводка */
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* --- БЕЛЫЕ КРУГИ-СТУЛЬЯ --- */
+.chair-circle {
+  display: block;
+  border: 2px solid #ffffff; /* Тонкий белый контур стула */
+  border-radius: 50%;        
+  box-sizing: border-box;
+}
+
+/* --- ЛЕВАЯ ЧАСТЬ: Стойка и Хвостик (Увеличенные) --- */
+.bar-counter-group {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.bar-vertical-seats {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+
+.seat-pixel, .bar-bottom-tail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ИСПРАВЛЕНО: увеличили кубики стойки с 65px до 75px */
+.seat-pixel {
+  width: 75px;
+  height: 75px;
+}
+
+/* ИСПРАВЛЕНО: длина автоматически пересчитана под новые кубики (75 * 3) */
+.bar-bottom-tail {
+  width: 225px; 
+  height: 75px;
+  border-radius: 4px;
+}
+
+/* ИСПРАВЛЕНО: увеличили кружок внутри стойки для красивой пропорции */
+.chair-circle.small-chair {
+  height: 26px;
+  width: 26px;
+}
+
+/* --- ЦЕНТРАЛЬНЫЕ И ПРАВЫЕ СТОЛЫ (4 прямоугольника — заметно увеличены) --- */
+.big-table {
+  /* ИСПРАВЛЕНО: увеличили ширину с 280px до 340px и высоту с 155px до 190px */
+  width: 340px;              
+  height: 190px;             
+  border-radius: 6px;        
+  padding: 20px 35px;        
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;     
+  align-items: center;
+}
+
+/* ИСПРАВЛЕНО: увеличили круги с 40px до 48px, чтобы они не казались мелкими */
+.big-table .chair-circle {
+  height: 48px;              
+  width: 48px;
+}
+
+/* Точные координаты столов в сетке залов */
+.table-center-1 { grid-column: 2; grid-row: 1; }
+.table-center-2 { grid-column: 2; grid-row: 2; }
+.table-right-1  { grid-column: 3; grid-row: 1; }
+.table-right-2  { grid-column: 3; grid-row: 2; }
+
+/* Интерактивный эффект: при наведении стол немного подсвечивается */
+.table-style:hover {
+  background-color: #5fc976; 
+  border-color: #ffbb33; /* Обводка при наведении становится золотистой */
+}
+
+
+/* Служебные элементы */
+.back-link { position: absolute; top: 30px; left: 40px; color: #ffffff; font-size: 3rem; text-decoration: none; line-height: 1; z-index: 10; }
+.map-title { position: absolute; top: 15px; left: 40px; color: #ffffff; font-size: 1rem; opacity: 0.5; }
+.toggle-widget { position: absolute; bottom: 40px; left: 40px; width: 75px; height: 34px; background-color: #000000; border-radius: 20px; display: flex; align-items: center; padding: 0 5px; box-sizing: border-box; }
+.toggle-circle { width: 24px; height: 24px; background-color: #ffff00; border-radius: 50%; }
+
+
+/* ==========================================================================
+   ОКНО БРОНИРОВАНИЯ
+   ========================================================================= */
+
+/* Темный полупрозрачный фон на весь экран */
+.booking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Затемнение заднего плана */
+  z-index: 2000;          /* Поверх карты столов */
+  display: none;          /* Изначально окно полностью скрыто */
+  justify-content: center;
+  align-items: center;    /* Центрируем красное окно строго по центру экрана */
+}
+
+/* Красное прямоугольное окно (точно как форма входа) */
+.booking-modal-box {
+  background-color: #f06a6a; /* Фирменный красный цвет */
+  width: 90%;
+  max-width: 500px;       /* Ограничение ширины как у формы входа */
+  padding: 40px;
+  border-radius: 4px;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопка-крестик для закрытия в верхнем правом углу */
+.booking-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Заголовок внутри окна */
+.booking-modal-title {
+  color: #ffffff;
+  margin: 0 0 30px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Контейнер для полей даты и времени */
+.booking-datetime-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;              /* Расстояние между полями, как у инпутов входа */
+  width: 100%;
+}
+
+/* Серые плашки для вывода Даты и Времени (стилизованы под поля ввода) */
+.booking-datetime-field {
+  background-color: #dedede; /* Светло-серый цвет, как у полей ввода формы */
+  color: #333333;
+  padding: 12px 20px;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;     /* Текст даты/времени центрирован внутри плашки */
+  font-weight: bold;
+}
+
+
+
+/* ==========================================================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ МЕНЮ (menu.html)
+   ========================================================================== */
+
+.menu-page-wrapper {
+  overflow-y: auto;          /* Включаем вертикальный скролл */
+  height: 100vh;
+  background-color: #EA6565;
+  padding: 100px 6vw 60px 6vw; /* Верхний отступ, чтобы карточки не залезали под кнопки */
+  box-sizing: border-box;
+}
+
+.category-section-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 30px 0 10px 0;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Аккуратная линия под типом */
+  
+  /* МАГИЯ ГРИДА: заставляем заголовок занять всю ширину ряда (все 3 колонки) */
+  grid-column: 1 / -1; 
+}
+
+.category-section-title:first-of-type {
+  margin-top: 0;
+}
+
+/* Крупная сетка: строго 3 колонки, строки подстраиваются автоматически */
+.menu-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-auto-rows: auto; /* Карточки будут крупными прямоугольниками */
+  column-gap: 40px;          /* Зазор между карточками по горизонтали */
+  row-gap: 30px;             /* Зазор по вертикали */
+  width: 75%;
+  
+}
+
+/* Стиль каждой карточки блюда (наследует стиль ваших прошлых карточек) */
+.menu-card-item {
+  background-color: #dedede; /* Светло-серый цвет карточек из макета */
+  color: #000000;
+  height: 180px;
+  width: auto; 
+  border-radius: 6px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Название сверху, цена снизу */
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.menu-card-item:hover {
+  transform: scale(1.02);    /* Легкое увеличение при наведении */
+  background-color: #e5e5e5;
+}
+
+/* Внутренние тексты в карточке */
+.menu-item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.menu-item-category {
+  font-size: 1rem;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-item-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f06a6a;            /* Выделяем цену красным акцентом */
+  margin-top: 15px;
+}
+.cart-toggle-btn {
+  position: absolute;
+  top: 30px;
+  right: 2vw;
+  background-color: #dedede; /* Светло-серый цвет из макета */
+  color: #000000;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+  font-weight: bold;
+}
+
+.cart-toggle-btn:hover {
+  background-color: #cdcdcd;
+}
+
+/* Обязательное свойство для карточки, чтобы пульт внутри не улетал */
+.menu-card-item {
+  position: relative; 
+}
+
+/* Маленький аккуратный серый квадрат-виджет в правом нижнем углу карточки */
+.card-counter-widget {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #b0b0b0; /* Темно-серый цвет квадратика из макета */
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+/* Кнопки плюс и минус внутри серого квадратика */
+.counter-btn {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 5px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter-btn:hover {
+  color: #ffffff; /* При наведении значки становятся белыми */
+}
+
+/* Цифра количества внутри серого квадратика */
+.counter-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000000;
+  min-width: 14px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* ==========================================================================
+   СТИЛИ ДЛЯ ОВЕРЛЕЯ ПУСТОЙ КОРЗИНЫ (menu.html)
+   ========================================================================== */
+
+/* 1. Общий темный полупрозрачный фон на весь экран */
+.menu-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Красивое затемнение заднего плана */
+  z-index: 3000;             /* Самый высокий слой, чтобы перекрывать меню и бургер */
+  
+  /* Центрируем красную карточку строго по середине экрана */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. Красная прямоугольная карточка по центру (В стиле формы входа) */
+.menu-modal-box {
+  background-color: #f06a6a; /* Наш фирменный красный цвет */
+  width: 90%;
+  max-width: 450px;          /* Ограничение ширины, чтобы окно не раздувалось */
+  padding: 40px;
+  border-radius: 4px;        /* Легкое аккуратное скругление углов */
+  position: relative;        /* Нужно для абсолютного позиционирования крестика */
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Мягкая глубокая тень */
+  
+  /* Эффект плавного масштабирования при появлении */
+  animation: menuModalIn 0.25s ease-out;
+}
+
+/* 3. Кнопка-крестик в верхнем правом углу карточки */
+.menu-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #ffffff;            /* Белый цвет */
+  font-size: 30px;           /* Крупный размер крестика */
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.menu-modal-close:hover {
+  opacity: 1;                /* Становится ярче при наведении */
+}
+
+/* 4. Заголовок внутри оверлея */
+.menu-modal-title {
+  color: #ffffff;
+  margin: 0 0 15px 0;
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;       /* Чистый нежирный шрифт, как на макетах */
+}
+
+/* 5. Описание под заголовком */
+.menu-modal-text {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;              /* Слегка приглушенный белый текст */
+  line-height: 1.4;
+}
+
+/* Класс-помощник для мгновенного скрытия оверлея */
+.menu-modal-overlay.id-hidden {
+  display: none !important;
+}
+
+/* Анимация: окно аккуратно увеличивается и проявляется из прозрачности */
+@keyframes menuModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/* ==========================================================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ КОРЗИНЫ (cart.html)
+   ========================================================================== */
+
+.cart-page-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f06a6a; /* Наш красный фон */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: sans-serif;
+  
+  /* Выравниваем элементы по центру вертикали экрана */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Расстояние между адресом и списком блюд */
+}
+
+/* Длинная серая плашка адреса ресторана */
+.cart-address-bar {
+  background-color: #dedede;
+  color: #000000;
+  width: 60%;
+  max-width: 800px;
+  padding: 15px;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Крупный центральный блок списка блюд */
+.cart-items-box {
+  background-color: #dedede;
+  color: #000000;
+  width: 45%;
+  max-width: 600px;
+  height: 40vh; /* Занимает чуть меньше половины экрана по высоте */
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  font-size: 1.5rem;
+  
+  /* Контент внутри списка выравниваем по центру */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Если блюд будет много, внутри блока появится аккуратный скролл */
+  gap: 15px;
+}
+
+/* Строка с выбранным блюдом внутри списка */
+.basket-item-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #b0b0b0;
+  padding-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+/* Кнопка "Далее" в правом нижнем углу */
+.cart-next-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 6vw;
+  background-color: #dedede;
+  color: #000000;
+  border: none;
+  padding: 12px 60px; /* Сделали её длинной как на макете */
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.cart-next-btn:hover { background-color: #cdcdcd; }
+
+/* ==========================================================================
+   ОБНОВЛЕННЫЕ СТИЛИ ОПЛАТЫ И ОВЕРЛЕЕВ (payment.html)
+   ========================================================================== */
+
+.payment-page-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f06a6a;
+  margin: 0;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрируем всю композицию на экране */
+  align-items: center;
+}
+
+/* Поле ввода адреса сверху */
+.payment-address-input {
+  background-color: #dedede;
+  color: #000000;
+  border: none;
+  width: 65%;
+  max-width: 850px;
+  padding: 15px;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+/* Центральный крупный блок Карты */
+.payment-map-box {
+  background-color: #dedede;
+  color: #000000;
+  width: 50%;
+  max-width: 650px;
+  height: 35vh;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Нижний ряд с двумя кнопками оплаты */
+.payment-buttons-row {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 650px;
+  gap: 30px;
+}
+
+/* Стиль для кнопок СБП и Карта банка */
+.pay-toggle-btn {
+  flex: 1;
+  background-color: #dedede;
+  color: #000000;
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+}
+.pay-toggle-btn:hover {
+  background-color: #cdcdcd;
+}
+
+/* --------------------------------------------------------------------------
+   СТИЛИ ДЛЯ НАСТОЯЩИХ ОВЕРЛЕЕВ (МОДАЛЬНЫХ ОКНО)
+   -------------------------------------------------------------------------- */
+
+/* Общий темный фон на весь экран для оверлеев */
+.payment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Затемнение */
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Красный прямоугольный бокс по центру (В стиле формы входа) */
+.payment-modal-box {
+  background-color: #f06a6a;
+  width: 90%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 4px;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопка-крестик в углу оверлея */
+.payment-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Заголовки внутри оверлеев */
+.payment-modal-title {
+  color: #ffffff;
+  margin: 0 0 30px 0;
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+/* Заглушка под картинку QR-кода */
+.qr-placeholder {
+  width: 200px;
+  height: 200px;
+  background-color: #dedede;
+  color: #333333;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Поле ввода номера карты */
+.card-input {
+  width: 100%;
+  background-color: #dedede;
+  color: #333333;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  letter-spacing: 2px;
+}
+
+/* Текст проверки карты */
+.card-validation-msg {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.msg-valid { color: #0044cc; } /* Синий цвет для верной карты */
+.msg-invalid { color: #bb0000; } /* Красный цвет для ошибки */
+
+/* Вспомогательный класс для скрытия окон */
+.payment-modal-overlay.id-hidden {
+  display: none !important;
+}
+/* Центральный крупный блок Карты */
+.payment-map-box {
+  background-color: #dedede;
+  width: 50%;
+  max-width: 650px;
+  height: 35vh;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  margin-bottom: 40px;
+  
+  /* Жестко прячем края карты, чтобы они скруглялись по углам рамки */
+  overflow: hidden; 
+  position: relative;
+}
+
+/* Стили для самого элемента карты */
+.embedded-map {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Стили для того, чтобы картинка QR-кода идеально вписалась в рамки */
+.qr-placeholder img {
+  width: 100%;               /* Картинка растянется ровно на всю ширину плашки */
+  height: 100%;              /* Картинка займет ровно всю высоту плашки */
+  display: block;            /* Убирает лишние отступы снизу картинки */
+  object-fit: contain;       /* Магия: картинка аккуратно сожмется под размеры рамки, не растягиваясь и не искажаясь */
+  border-radius: 12px;        /* Легкое скругление углов картинки в тон плашке */
+}
+
+
+
+
+/*Фоны заглушки*/
+.page-bg-1 { background-color: #EA6565; }
+.page-bg-2 { background-color: #D7AB6D; }
+.page-bg-3 { background-color: #C56DD7; }
+.page-bg-4 { background-color: #6D8FD7; }
+.page-bg-5 { background-color: #6DD7B9; }
