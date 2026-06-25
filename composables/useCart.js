@@ -1,4 +1,4 @@
-// composables/useCart.js
+
 export const useCart = () => {
   const cart = useState('cart', () => [])
 

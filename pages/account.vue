@@ -14,7 +14,7 @@
       <div class="account-menu-item user-name">{{ user?.login || 'Гость' }}</div>
       <div class="account-menu-item">Количество баллов: {{ user?.points || 0 }}</div>
       <div class="account-menu-item">Любимые заведения</div>
-      <div class="account-menu-item">Оставить отзыв</div>
+      <a href="https://yandex.ru/maps/org/retrowave_bar/79939704384/reviews/?ll=43.992053%2C56.329911&z=17" class="account-menu-item" target="_blank">Оставить отзыв</a>
       <NuxtLink to="/booking" class="account-menu-item">Бронирование</NuxtLink>
       <div class="account-menu-item logout-btn" @click="logout">Выйти из аккаунта</div>
     </div>

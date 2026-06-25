@@ -33,8 +33,4 @@ const handleProfileClick = () => {
   emit('close')
 }
 
-// Для отладки – следим за изменением пользователя
-// watch(user, (newVal) => {
-//   console.log('👤 Пользователь в сайдбаре изменился:', newVal)
-// }, { deep: true })
 </script>

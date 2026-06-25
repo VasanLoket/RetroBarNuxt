@@ -88,13 +88,30 @@ const formatCard = (event) => {
 // Простая валидация карты (длина 16 цифр)
 const validateCard = (rawDigits) => {
   if (rawDigits.length === 16) {
-    cardValidationMessage.value = '✅ Номер карты введён корректно'
+    if(validateCardLuhn(rawDigits)){
+      cardValidationMessage.value = '✅ Номер карты введён корректно'
+    }else{
+      cardValidationMessage.value = '❌ Не верный номер карты'
+    }
   } else if (rawDigits.length > 0) {
     cardValidationMessage.value = `❌ Должно быть 16 цифр (сейчас ${rawDigits.length})`
-  } else {
-    cardValidationMessage.value = ''
-  }
+  } 
 }
+
+function validateCardLuhn(cardNumber) {
+    let sum = 0;
+    let shouldDouble = false;
+    for (let i = cardNumber.length - 1; i >= 0; i--) {
+      let digit = parseInt(cardNumber.charAt(i));
+      if (shouldDouble) {
+        digit *= 2;
+        if (digit > 9) digit -= 9;
+      }
+      sum += digit;
+      shouldDouble = !shouldDouble;
+    }
+    return (sum % 10 === 0);
+  }
 
 // При монтировании можно загрузить данные корзины (если нужно)
 onMounted(() => {

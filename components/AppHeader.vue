@@ -1,8 +1,5 @@
 <template>
   <header >
-    
-
-
     <!-- Кнопка бургера -->
     <button v-if="isHomePage" class="burger-menu" @click="$emit('toggleSidebar')">
       <span></span>

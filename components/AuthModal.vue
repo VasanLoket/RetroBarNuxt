@@ -92,6 +92,13 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
+.modal-close{
+  
+  color: #333;
+}
+.modal-title{
+  color: #333;
+}
 .modal-overlay {
   position: fixed;
   top: 0;
