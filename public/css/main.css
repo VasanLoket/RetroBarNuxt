@@ -20,10 +20,13 @@ h1 {
 
 /*Первый блок*/
 
+.page-section{
+  z-index: 2;
+}
+
 .main-content {
     flex: 1;
-    background: #EA6565 url('slide-1.png') no-repeat center center;
-
+    
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -50,7 +53,7 @@ h1 {
   height: 100vh;            
   width: 25%;
   min-width: 260px;
-  background-color: #00cc44;
+  background-color: #35355ef0;
   z-index: 999;             
   
   display: flex;
@@ -60,6 +63,7 @@ h1 {
   box-sizing: border-box;
   
   
+  
   transform: translateX(100%); 
   transition: transform 0.4s ease; 
 }
@@ -67,6 +71,8 @@ h1 {
 
 .sidebar.active {
   transform: translateX(0);  
+  box-shadow:  0 0 60px rgba(255, 0, 255, 0.4),   /* розовое свечение */
+     0 0 60px rgba(0, 255, 255, 0.3);
 }
 
 .close-menu {
@@ -307,7 +313,7 @@ h1 {
 /* Пятый блок */
 
 footer.page-section.page-bg-5.fifth-screen {
-  background-color: #6ed1b2;
+  background-color: #1a1a2e80;
   height: 25vh;             
   min-height: 150px;
   scroll-snap-align: end;    
@@ -370,7 +376,7 @@ footer.page-section.page-bg-5.fifth-screen {
 
 /* Красное окно из вашего макета */
 .modal-box {
-  background-color: #f06a6a; /* Красный цвет как на картинке */
+   /* Красный цвет как на картинке */
   width: 90%;
   max-width: 500px;       /* Ограничение ширины */
   padding: 40px;
@@ -466,7 +472,7 @@ footer.page-section.page-bg-5.fifth-screen {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: #f06a6a; /* Красный фон из макета */
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -607,7 +613,7 @@ footer.page-section.page-bg-5.fifth-screen {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #f06a6a;
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -767,7 +773,7 @@ footer.page-section.page-bg-5.fifth-screen {
 
 /* Красное прямоугольное окно (точно как форма входа) */
 .booking-modal-box {
-  background-color: #f06a6a; /* Фирменный красный цвет */
+ 
   width: 90%;
   max-width: 500px;       /* Ограничение ширины как у формы входа */
   padding: 40px;
@@ -829,7 +835,7 @@ footer.page-section.page-bg-5.fifth-screen {
 .menu-page-wrapper {
   overflow-y: auto;          /* Включаем вертикальный скролл */
   height: 100vh;
-  background-color: #EA6565;
+  
   padding: 100px 6vw 60px 6vw; /* Верхний отступ, чтобы карточки не залезали под кнопки */
   box-sizing: border-box;
 }
@@ -994,7 +1000,7 @@ footer.page-section.page-bg-5.fifth-screen {
 
 /* 2. Красная прямоугольная карточка по центру (В стиле формы входа) */
 .menu-modal-box {
-  background-color: #f06a6a; /* Наш фирменный красный цвет */
+  
   width: 90%;
   max-width: 450px;          /* Ограничение ширины, чтобы окно не раздувалось */
   padding: 40px;
@@ -1073,7 +1079,7 @@ footer.page-section.page-bg-5.fifth-screen {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #f06a6a; /* Наш красный фон */
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -1157,7 +1163,7 @@ footer.page-section.page-bg-5.fifth-screen {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #f06a6a;
+  
   margin: 0;
   padding: 40px;
   box-sizing: border-box;
@@ -1252,7 +1258,7 @@ footer.page-section.page-bg-5.fifth-screen {
 
 /* Красный прямоугольный бокс по центру (В стиле формы входа) */
 .payment-modal-box {
-  background-color: #f06a6a;
+ 
   width: 90%;
   max-width: 500px;
   padding: 40px;
@@ -1358,13 +1364,3 @@ footer.page-section.page-bg-5.fifth-screen {
   object-fit: contain;       /* Магия: картинка аккуратно сожмется под размеры рамки, не растягиваясь и не искажаясь */
   border-radius: 12px;        /* Легкое скругление углов картинки в тон плашке */
 }
-
-
-
-
-/*Фоны заглушки*/
-.page-bg-1 { background-color: #EA6565; }
-.page-bg-2 { background-color: #D7AB6D; }
-.page-bg-3 { background-color: #C56DD7; }
-.page-bg-4 { background-color: #6D8FD7; }
-.page-bg-5 { background-color: #6DD7B9; }

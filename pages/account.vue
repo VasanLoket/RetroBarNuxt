@@ -77,7 +77,7 @@ const logout = () => {
 .back-link {
   font-size: 2rem;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -91,10 +91,10 @@ const logout = () => {
   margin-bottom: 10px;
 }
 .history-list {
-  border: 1px solid #ccc;
+  border: 1px solid #1a1a2;
   padding: 10px;
   border-radius: 8px;
-  background: #f9f9f9;
+  background: #1a1a2e;
 }
 .history-item {
   padding: 8px 0;
@@ -106,16 +106,17 @@ const logout = () => {
   cursor: pointer;
   transition: background 0.2s;
   text-decoration: none;
-  color: #333;
+  color: #f0f0f0;
   display: block;
 }
 .account-menu-item:hover {
   background: #f0f0f0;
+  color: #333;
 }
 .user-name {
   font-size: 1.5rem;
   font-weight: bold;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #f0f0f0;
 }
 .logout-btn {
   color: white;

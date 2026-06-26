@@ -12,15 +12,31 @@
       <template v-for="(items, category) in groupedMenu" :key="category">
         <h2 class="category-section-title">{{ category }}</h2>
         <div v-for="item in items" :key="item.id" class="menu-card-item">
-          <span class="menu-item-category">{{ item.category }}</span>
-          <h3 class="menu-item-title">{{ item.name }}</h3>
-          <span class="menu-item-price">{{ item.price }} ₽</span>
-          <div v-if="isOrderMode" class="card-counter-widget">
-            <button class="counter-btn minus-btn" @click.stop="decrement(item.id)">-</button>
-            <span class="counter-value">{{ basket[item.id] || 0 }}</span>
-            <button class="counter-btn plus-btn" @click.stop="increment(item.id)">+</button>
-          </div>
+        <!-- Изображение блюда -->
+        <div class="menu-item-image-wrapper">
+          <img
+            :src="item.image || '/img/placeholder.jpg'"
+            :alt="item.name"
+            class="menu-item-image"
+            @error="(e) => e.target.src = '/img/placeholder.jpg'" loading="lazy"
+          />
         </div>
+
+        <span class="menu-item-category">{{ item.category }}</span>
+        <h3 class="menu-item-title">{{ item.name }}</h3>
+        <span class="menu-item-price">{{ item.price }} ₽</span>
+
+        <!-- Блок порции (добавленный ранее) -->
+        <div v-if="item.portion_value && item.portion_unit" class="menu-item-portion">
+          {{ item.portion_value }} {{ item.portion_unit }}
+        </div>
+
+        <div v-if="isOrderMode" class="card-counter-widget">
+          <button class="counter-btn minus-btn" @click.stop="decrement(item.id)">-</button>
+          <span class="counter-value">{{ basket[item.id] || 0 }}</span>
+          <button class="counter-btn plus-btn" @click.stop="increment(item.id)">+</button>
+        </div>
+      </div>
       </template>
     </div>
 
@@ -114,11 +130,26 @@ if (process.client) {
 </script>
 
 <style scoped>
+.menu-item-portion {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 4px 0 8px;
+}
 .menu-page-wrapper {
   padding-left: 20hv;
   max-width: 100%;
   margin: 0 auto;
 }
+
+
+
+.menu-item-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* квадрат */
+  object-fit: cover;   /* обрезает лишнее, сохраняя пропорции */
+  display: block;
+}
+
 .back-link {
   font-size: 2rem;
   text-decoration: none;
@@ -155,9 +186,28 @@ if (process.client) {
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  position: relative;
   transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
 }
+
+.menu-item-image-wrapper {
+  width: 100%;
+  /* фиксируем высоту, чтобы картинка не сжималась */
+  aspect-ratio: 1 / 1; /* квадрат */
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0; /* чтобы при флексе картинка не сжималась */
+  margin-bottom: 10px;
+}
+.menu-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .menu-card-item:hover {
   transform: translateY(-3px);
 }

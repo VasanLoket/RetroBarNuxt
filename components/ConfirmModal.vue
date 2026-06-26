@@ -44,7 +44,7 @@ const confirm = () => {
   display: flex;
 }
 .confirm-modal-box {
-  background: #fff;
+  background: #1a1a2e;
   padding: 30px;
   border-radius: 12px;
   max-width: 400px;
@@ -60,13 +60,16 @@ const confirm = () => {
   background: none;
   border: none;
   cursor: pointer;
+  color: #f0f0f0;
 }
 .confirm-modal-title {
   margin-top: 0;
   margin-bottom: 10px;
+  color: #f0f0f0;
 }
 .confirm-modal-message {
   margin-bottom: 20px;
+  color: #f0f0f0;
 }
 .confirm-modal-actions {
   display: flex;

@@ -128,22 +128,21 @@ onMounted(() => {
 
 <style scoped>
 /* Стили, скопированные из старого CSS (можно адаптировать) */
-.payment-page-wrapper {
-  
+.payment-page-wrapper {  
   margin: 0 auto;
   padding: 20px;
 }
 .back-link {
   font-size: 2rem;
   text-decoration: none;
-  color: #333;
+  color: #f0f0f0;
   display: inline-block;
   margin-bottom: 20px;
 }
 .payment-address-input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  background: #1a1a2e;
   border-radius: 6px;
   font-size: 1rem;
   margin-bottom: 20px;
@@ -151,11 +150,13 @@ onMounted(() => {
 .payment-map-box {
   margin-bottom: 20px;
   border-radius: 8px;
+  background: #1a1a2e;
   overflow: hidden;
 }
 .payment-map-box iframe {
   width: 100%;
   height: 300px;
+  border-radius: 6px;
 }
 .payment-buttons-row {
   display: flex;
@@ -192,7 +193,7 @@ onMounted(() => {
   display: none;
 }
 .payment-modal-box {
-  background: white;
+  background: #1a1a2e;
   padding: 30px;
   border-radius: 12px;
   max-width: 400px;

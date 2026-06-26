@@ -9,26 +9,31 @@
       <p>Корзина пуста</p>
       <NuxtLink to="/menu" class="btn">Перейти в меню</NuxtLink>
     </div>
+
+    
+    
     <div v-else>
-      <div class="cart-list">
-        <div v-for="item in cartItems" :key="item.id" class="cart-item">
-          <div class="item-info">
-            <span class="item-name">{{ item.name }}</span>
-            <span class="item-price">{{ item.price }} ₽</span>
-          </div>
-          <div class="item-controls">
-            <button class="qty-btn" @click="decrease(item.id)">-</button>
-            <span class="qty">{{ item.quantity }}</span>
-            <button class="qty-btn" @click="increase(item.id)">+</button>
-            <button class="remove-btn" @click="removeItem(item.id)">✕</button>
+      <div class="cart-wraper">
+        <div class="cart-list">
+          <div v-for="item in cartItems" :key="item.id" class="cart-item">
+            <div class="item-info">
+              <span class="item-name">{{ item.name }}</span>
+              <span class="item-price">{{ item.price }} ₽</span>
+            </div>
+            <div class="item-controls">
+              <button class="qty-btn" @click="decrease(item.id)">-</button>
+              <span class="qty">{{ item.quantity }}</span>
+              <button class="qty-btn" @click="increase(item.id)">+</button>
+              <button class="remove-btn" @click="removeItem(item.id)">✕</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="cart-total">
-        <span>Итого:</span>
-        <span class="total-price">{{ totalPrice }} ₽</span>
-      </div>
+          <div class="cart-total">
+            <span class="text">Итого:</span>
+            <span class="total-price">{{ totalPrice }} ₽</span>
+          </div>
+        </div>
 
       <button class="checkout-btn" @click="checkout">Оформить заказ</button>
     </div>
@@ -120,15 +125,20 @@ const checkout = () => {
   margin: 0 auto;
   padding: 20px;
 }
+
+.text{
+  color: #f0f0f0;
+}
 .section-title {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 20px;
+  color: #f0f0f0;
 }
 .back-link {
   display: inline-block;
   margin-bottom: 20px;
-  color: #333;
+  color: #f0f0f0;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -148,6 +158,11 @@ const checkout = () => {
   border-radius: 6px;
   text-decoration: none;
 }
+.cart-wraper{
+  background: #1a1a2e;  
+  border-radius: 6px;
+  padding: 24px;
+}
 .cart-list {
   border-top: 1px solid #ddd;
 }
@@ -164,6 +179,7 @@ const checkout = () => {
 .item-name {
   font-size: 1.1rem;
   font-weight: bold;
+  color: #ffffff;
 }
 .item-price {
   margin-left: 15px;
@@ -191,6 +207,7 @@ const checkout = () => {
   min-width: 30px;
   text-align: center;
   font-weight: bold;
+  color: #f0f0f0;
 }
 .remove-btn {
   background: none;

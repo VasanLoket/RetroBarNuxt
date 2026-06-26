@@ -33,9 +33,6 @@ defineEmits(['toggleSidebar'])
   z-index: 100;
 }
 
-.logo img {
-  height: 40px; /* подберите под свой логотип */
-}
 
 .site-title {
   font-size: 1.2rem;
@@ -45,6 +42,7 @@ defineEmits(['toggleSidebar'])
 }
 
 .burger-menu {
+ 
   background: none;
   border: none;
   cursor: pointer;

@@ -97,7 +97,7 @@ const handleSubmit = async () => {
   color: #333;
 }
 .modal-title{
-  color: #333;
+  color: #f0f0f0;
 }
 .modal-overlay {
   position: fixed;
@@ -115,7 +115,7 @@ const handleSubmit = async () => {
   display: flex;
 }
 .modal-box {
-  background: #fff;
+  background: #1a1a2e;
   padding: 30px;
   border-radius: 8px;
   max-width: 400px;

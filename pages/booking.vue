@@ -291,7 +291,7 @@ onMounted(() => {
   display: flex;
 }
 .booking-modal-box {
-  background: #fff;
+  background: #1a1a2e;
   padding: 30px;
   border-radius: 12px;
   max-width: 400px;
@@ -310,6 +310,7 @@ onMounted(() => {
 }
 .booking-modal-title {
   margin-top: 0;
+  color: #f0f0f0;
   margin-bottom: 20px;
 }
 .booking-datetime-container {
