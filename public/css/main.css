@@ -89,8 +89,13 @@ h1 {
 
 
 .menu-item {
+<<<<<<< HEAD
+    background-color: #1a1a2e;
+    color:#f0f0f0f0;
+=======
     background-color: white;
     color:#333333;
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
     padding: 10px;
     text-align: left;
 
@@ -134,6 +139,11 @@ h1 {
 
 .menu-item:hover {
   background-color: #f0f0f0;
+<<<<<<< HEAD
+  background-color: #35355e; 
+  border: 2px solid #f0f0f0;
+=======
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 
 
@@ -160,7 +170,11 @@ h1 {
 }
 
 .card {
+<<<<<<< HEAD
+    background-color: #1a1a2e; 
+=======
     background-color: #dedede; 
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
     color: #000000;
     border-radius: 4px; 
     font-family: "Montserrat", sans-serif;
@@ -178,7 +192,11 @@ h1 {
 }
 
 .card:hover {
+<<<<<<< HEAD
+  background-color: #35355e; 
+=======
   background-color: #efefef; 
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   transform: scale(1.02);   
   
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
@@ -186,11 +204,20 @@ h1 {
 
 .about-card {
     grid-row: span 2;  
+<<<<<<< HEAD
+    color: #f0f0f0f0;
+=======
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 
 .photo-card {
   font-size: 1.2rem;        
+<<<<<<< HEAD
+  letter-spacing: 1px;  
+  color: #f0f0f0f0;    
+=======
   letter-spacing: 1px;      
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   cursor: pointer;         
 }
 
@@ -219,7 +246,13 @@ h1 {
   background-color: #ffffff; 
   border-radius: 2px;
 
+<<<<<<< HEAD
+  box-shadow:
+    0 0 60px rgba(255, 0, 255, 0.6),
+    0 0 100px rgba(0, 255, 255, 0.4);
+=======
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); 
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 
 .page-section {
@@ -260,6 +293,16 @@ h1 {
   max-width: 700px;          /* ширина по вашему макету */
   margin: 0 auto;            /* центрирует сам блок по горизонтали */
   padding: 30px 25px;
+<<<<<<< HEAD
+  background-color: #1a1a2e; 
+  color: #f0f0f0f0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beer-block h3 {
+=======
   background-color: #dedede; 
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.06);
@@ -267,6 +310,7 @@ h1 {
 }
 
 .beer-card h3 {
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   font-size: 22px;
   margin: 0 0 12px 0;
   font-weight: 700;
@@ -274,6 +318,14 @@ h1 {
   text-align: left; 
 }
 
+<<<<<<< HEAD
+.beer-block:hover{
+  background-color: #35355e; 
+  transform: scale(1.02);   
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+}
+=======
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 
 /* Четвертый блок */
 
@@ -297,8 +349,13 @@ h1 {
 
 .promo-card {
   flex: 1;                   
+<<<<<<< HEAD
+  background-color: #1a1a2e;
+  color: #f0f0f0f0;
+=======
   background-color: #dedede;
   color: #000000;
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   border-radius: 4px;
   padding: 30px;            
   box-sizing: border-box;
@@ -341,8 +398,13 @@ footer.page-section.page-bg-5.fifth-screen {
 
 
 .footer-card {
+<<<<<<< HEAD
+  background-color: #1a1a2e; 
+  color: #f0f0f0f0;
+=======
   background-color: #dedede; 
   color: #000000;
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   border-radius: 4px;
   padding: 20px;             
   box-sizing: border-box;        

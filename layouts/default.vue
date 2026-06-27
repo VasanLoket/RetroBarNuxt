@@ -1,6 +1,10 @@
 <template>
   <div class="app-layout">
+<<<<<<< HEAD
+    <!-- Фон -->
+=======
     <!-- VHS-фон теперь с классом, которому дадим z-index: -1 -->
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
      
     <SynthwaveScene 
       :square-size ="450"
@@ -16,12 +20,23 @@
       accent-color="#ff0080"
       :intensity="1.2"
       :show-grid="true"
+<<<<<<< HEAD
+      :performance-mode="true" 
+    />
+
+    <CRTOverlay :performance-mode="false" />
+    
+    <AppHeader @toggleSidebar="toggleSidebar" />
+
+    
+=======
     />
     
 
     <AppHeader @toggleSidebar="toggleSidebar" />
 
     <!-- Оверлей для закрытия сайдбара -->
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
     <div v-if="sidebarOpen" class="sidebar-overlay" @click="closeSidebar"></div>
 
     <ConfirmModal :open="confirmModalOpen" @close="closeConfirmModal" @confirm="confirmLogout" />

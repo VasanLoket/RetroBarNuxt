@@ -41,6 +41,27 @@ defineEmits(['toggleSidebar'])
   margin-left: 15px;
 }
 
+<<<<<<< HEAD
+.burger-menu:hover {
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+}
+
+/* ===== Полоски ===== */
+.burger-menu span {
+  display: block;
+  width: 32px;
+  height: 3px;
+  background-color: #ff7bff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.burger-menu:hover span {
+  background-color: #88ddff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+=======
 .burger-menu {
  
   background: none;
@@ -64,5 +85,6 @@ defineEmits(['toggleSidebar'])
 /* Можно добавить анимацию при наведении */
 .burger-menu:hover span {
   background-color: #f0a500;
+>>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 </style>
