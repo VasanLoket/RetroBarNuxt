@@ -14,11 +14,11 @@
       <div class="card about-card">
         <h3>Уютный бар для GEEKов и для тех, кто скучает по посиделкам с друзьями у сеги 👾</h3>
           <ul>
-            <li>❄️ - холодное пенное</li>
-            <li>🔥 - редкий крафт</li>
-            <li>🍟 - отличные закуски</li>
-            <li>🎮 - отличная компания</li>
-            <li>👾 - ретро-игры</li>
+            <li>❄️ холодное пенное</li>
+            <li>🔥 редкий крафт</li>
+            <li>🍟 отличные закуски</li>
+            <li>🎮 отличная компания</li>
+            <li>👾 ретро-игры</li>
             <li class="hashtag">#олдытут! Приходи с друзьями и окунись в атмосферу 80х-90х-00х годов</li>
           </ul>
       </div>
@@ -193,7 +193,8 @@
 }
 
 .about-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   color: #ff7bff;
   text-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
   margin-bottom: 16px;
@@ -210,7 +211,7 @@
   gap: 12px;
   font-size: 1.05rem;
   line-height: 1.5;
-  text-align: right;
+  text-align: left;
 }
 
 .about-card ul li {
