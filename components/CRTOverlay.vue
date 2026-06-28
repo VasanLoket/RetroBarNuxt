@@ -70,6 +70,18 @@ defineProps({
 }
 
 /* Глитч-бары через псевдоэлементы (были в отдельном слое .glitch-bars) */
+/* ===== 2. Шум + глитч-бары (оптимизировано) ===== */
+.noise-glitch {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.3'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  will-change: transform; /* только transform, не top */
+}
+
+
 .noise-glitch::before,
 .noise-glitch::after {
   content: '';
@@ -77,23 +89,36 @@ defineProps({
   left: 0;
   width: 100%;
   height: 15px;
-  opacity: 0;
-  box-shadow: 0 0 15px;
-  will-change: transform, top, opacity;
+  opacity: 0;  
+  will-change: transform, opacity;
+  transform: translateY(0);
 }
 
 .noise-glitch::before {
-  background: rgba(255, 0, 60, 0.8);
-  box-shadow: 0 0 20px rgba(255, 0, 60, 0.6);
+  background: rgba(255, 0, 60, 0.7);
+  /* убрали box-shadow, оставили только цвет */
   animation: glitch-red 4s infinite linear;
 }
 
 .noise-glitch::after {
-  background: rgba(0, 240, 255, 0.8);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+  background: rgba(0, 240, 255, 0.7);
   animation: glitch-blue 3.5s infinite linear;
 }
 
+/* ===== Оптимизированные анимации (без top, только transform) ===== */
+@keyframes glitch-red {
+  0% { transform: translateY(-10%) translateX(0); opacity: 0; }
+  2% { transform: translateY(15%) translateX(-30px); opacity: 1; }
+  4% { transform: translateY(20%) translateX(20px); opacity: 0; }
+  100% { transform: translateY(110%) translateX(0); opacity: 0; }
+}
+
+@keyframes glitch-blue {
+  0% { transform: translateY(110%) translateX(0); opacity: 0; }
+  3% { transform: translateY(40%) translateX(30px); opacity: 1; }
+  6% { transform: translateY(35%) translateX(-20px); opacity: 0; }
+  100% { transform: translateY(-10%) translateX(0); opacity: 0; }
+}
 /* ===== 3. Разрыв экрана (screen-tear) ===== */
 .screen-tear {
   position: absolute;

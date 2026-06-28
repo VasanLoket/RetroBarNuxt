@@ -14,11 +14,7 @@
       <div class="account-menu-item user-name">{{ user?.login || 'Гость' }}</div>
       <div class="account-menu-item">Количество баллов: {{ user?.points || 0 }}</div>
       <div class="account-menu-item">Любимые заведения</div>
-<<<<<<< HEAD
       <a href="https://yandex.ru/maps/org/retrowave_bar/79939704384/reviews/?ll=43.992053%2C56.329911&z=17" class="account-menu-item" target="_blank">Оставить отзыв</a>
-=======
-      <div class="account-menu-item">Оставить отзыв</div>
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
       <NuxtLink to="/booking" class="account-menu-item">Бронирование</NuxtLink>
       <div class="account-menu-item logout-btn" @click="openConfirmModal">Выйти из аккаунта</div>
     </div>
@@ -58,7 +54,6 @@ const logout = () => {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 .account-left {
   flex: 1;
 }
@@ -262,80 +257,5 @@ const logout = () => {
     padding: 10px 12px;
     font-size: 0.9rem;
   }
-=======
-/* Стили для этой страницы (если нужно дополнить глобальные) */
-:deep(.app-layout) {
-  max-width: 100% !important;
-  padding: 0 !important;
-}
-:deep(.main-content) {
-  max-width: 100% !important;
-  padding: 0 !important;
-}
-/* Сама обёртка страницы – на всю ширину */
-.account-page-wrapper {
-  max-width: 100%;
-  padding: 20px;
-}
-.account-left {
-  flex: 1;
-}
-.account-right {
-  flex: 1;
-}
-.back-link {
-  font-size: 2rem;
-  text-decoration: none;
-  color: #ffffff;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-.loyalty-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.history-main-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.history-list {
-  border: 1px solid #1a1a2;
-  padding: 10px;
-  border-radius: 8px;
-  background: #1a1a2e;
-}
-.history-item {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-}
-.account-menu-item {
-  padding: 12px 16px;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-  transition: background 0.2s;
-  text-decoration: none;
-  color: #f0f0f0;
-  display: block;
-}
-.account-menu-item:hover {
-  background: #f0f0f0;
-  color: #333;
-}
-.user-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-bottom: 2px solid #f0f0f0;
-}
-.logout-btn {
-  color: white;
-  background: #d9534f;
-  border-radius: 6px;
-  text-align: center;
-  margin-top: 40px;
-}
-.logout-btn:hover {
-  background: #c9302c;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 </style>

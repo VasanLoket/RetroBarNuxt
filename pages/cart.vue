@@ -1,11 +1,7 @@
 <template>
   <section class="cart-page">
     <h2 class="section-title">Корзина</h2>
-<<<<<<< HEAD
     <NuxtLink to="/menu" class="back-link">&#8592;</NuxtLink>
-=======
-    <NuxtLink to="/" class="back-link">&#8592; На главную</NuxtLink>
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 
     <div v-if="pending" class="loading">Загрузка...</div>
     <div v-else-if="error" class="error">{{ error.message }}</div>
@@ -124,32 +120,20 @@ const checkout = () => {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 /* ===== Фон страницы ===== */
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .cart-page {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-<<<<<<< HEAD
   min-height: 100vh;
   color: #e0d0ff;
 }
 
 /* ===== Заголовок ===== */
-=======
-}
-
-.text{
-  color: #f0f0f0;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .section-title {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 20px;
-<<<<<<< HEAD
   color: #ff7bff;
   text-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
 }
@@ -170,25 +154,10 @@ const checkout = () => {
 
 
 /* ===== Пустая корзина ===== */
-=======
-  color: #f0f0f0;
-}
-.back-link {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: #f0f0f0;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-.back-link:hover {
-  color: #f0a500;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .empty-cart {
   text-align: center;
   padding: 40px 0;
 }
-<<<<<<< HEAD
 .empty-cart p {
   font-size: 1.3rem;
   color: #b0a0c8;
@@ -234,30 +203,10 @@ const checkout = () => {
 }
 
 /* ===== Элемент корзины ===== */
-=======
-.empty-cart .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #f0a500;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-}
-.cart-wraper{
-  background: #1a1a2e;  
-  border-radius: 6px;
-  padding: 24px;
-}
-.cart-list {
-  border-top: 1px solid #ddd;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .cart-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
   padding: 16px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -285,30 +234,12 @@ const checkout = () => {
 }
 
 /* ===== Управление количеством ===== */
-=======
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
-}
-.item-info {
-  flex: 2;
-}
-.item-name {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-.item-price {
-  margin-left: 15px;
-  color: #888;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .item-controls {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 .qty-btn {
-<<<<<<< HEAD
   background: transparent;
   border: 2px solid rgba(255, 0, 255, 0.3);
   width: 32px;
@@ -329,36 +260,17 @@ const checkout = () => {
   border-color: #ff7bff;
   box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
   transform: scale(1.1);
-=======
-  background: #eee;
-  border: none;
-  width: 30px;
-  height: 30px;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.qty-btn:hover {
-  background: #ccc;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 .qty {
   min-width: 30px;
   text-align: center;
-<<<<<<< HEAD
   font-weight: 700;
   color: #ffffff;
   font-size: 1.1rem;
-=======
-  font-weight: bold;
-  color: #f0f0f0;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 .remove-btn {
   background: none;
   border: none;
-<<<<<<< HEAD
   color: #ff6b6b;
   font-size: 1.4rem;
   cursor: pointer;
@@ -419,52 +331,11 @@ const checkout = () => {
 }
 
 /* ===== Состояния загрузки и ошибки ===== */
-=======
-  color: #d9534f;
-  font-size: 1.4rem;
-  cursor: pointer;
-  margin-left: 5px;
-}
-.remove-btn:hover {
-  color: #c9302c;
-}
-.cart-total {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 20px 0;
-  border-top: 2px solid #333;
-  margin-top: 20px;
-}
-.total-price {
-  margin-left: 20px;
-  color: #f0a500;
-}
-.checkout-btn {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  background: #1a1a2e;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: 0.2s;
-  margin-top: 20px;
-}
-.checkout-btn:hover {
-  background: #f0a500;
-  color: #1a1a2e;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .loading, .error {
   text-align: center;
   padding: 40px;
   font-size: 1.2rem;
 }
-<<<<<<< HEAD
 .loading {
   color: #88ddff;
   text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
@@ -530,9 +401,5 @@ const checkout = () => {
   .remove-btn {
     font-size: 1.2rem;
   }
-=======
-.error {
-  color: red;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 </style>

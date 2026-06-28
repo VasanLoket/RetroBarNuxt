@@ -127,7 +127,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 /* ===== Фон страницы ===== */
 .payment-page-wrapper {
   margin: 0 auto;
@@ -186,53 +185,20 @@ onMounted(() => {
 }
 .payment-map-box:hover {
   box-shadow: 0 0 50px rgba(255, 0, 255, 0.2), 0 0 80px rgba(0, 255, 255, 0.1);
-=======
-/* Стили, скопированные из старого CSS (можно адаптировать) */
-.payment-page-wrapper {  
-  margin: 0 auto;
-  padding: 20px;
-}
-.back-link {
-  font-size: 2rem;
-  text-decoration: none;
-  color: #f0f0f0;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-.payment-address-input {
-  width: 100%;
-  padding: 12px;
-  background: #1a1a2e;
-  border-radius: 6px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-.payment-map-box {
-  margin-bottom: 20px;
-  border-radius: 8px;
-  background: #1a1a2e;
-  overflow: hidden;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 .payment-map-box iframe {
   width: 100%;
   height: 300px;
-<<<<<<< HEAD
   border-radius: 20px;
   display: block;
   
 }
 
 /* ===== Ряд кнопок оплаты ===== */
-=======
-  border-radius: 6px;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .payment-buttons-row {
   display: flex;
   gap: 20px;
   justify-content: center;
-<<<<<<< HEAD
   margin-top: 10px;
 }
 .pay-toggle-btn {
@@ -260,36 +226,15 @@ onMounted(() => {
 }
 
 /* ===== Модалки (общие) ===== */
-=======
-}
-.pay-toggle-btn {
-  padding: 12px 30px;
-  background: #1a1a2e;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.pay-toggle-btn:hover {
-  background: #f0a500;
-  color: #1a1a2e;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .payment-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   background: rgba(10, 0, 21, 0.85);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-=======
-  background: rgba(0,0,0,0.5);
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,7 +244,6 @@ onMounted(() => {
   display: none;
 }
 .payment-modal-box {
-<<<<<<< HEAD
   background: rgba(10, 0, 21, 0.95);
   padding: 30px 32px;
   border-radius: 24px;
@@ -438,42 +382,5 @@ onMounted(() => {
   .back-link {
     font-size: 1.6rem;
   }
-=======
-  background: #1a1a2e;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 90%;
-  position: relative;
-}
-.payment-modal-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.payment-modal-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-.qr-placeholder img {
-  width: 100%;
-  height: auto;
-}
-.card-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-}
-.card-validation-msg {
-  margin-top: 10px;
-  font-size: 0.9rem;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 </style>

@@ -1,15 +1,10 @@
 <template>
-<<<<<<< HEAD
   <!-- Оверлей (затемнение) – клик по нему закрывает сайдбар -->
   <div class="sidebar-overlay" :class="{ active: open }" @click="$emit('close')"></div>
 
   <!-- Сам сайдбар -->
   <aside class="sidebar" :class="{ active: open }">
     
-=======
-  <aside class="sidebar" :class="{ active: open }">
-    <button class="close-menu" @click="$emit('close')">&times;</button>
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 
     <!-- Имя пользователя или кнопка входа -->
     <div v-if="!isAuthenticated" class="menu-item size-l" @click="handleProfileClick">
@@ -19,15 +14,9 @@
       {{ user?.login || 'Профиль' }}
     </NuxtLink>
 
-<<<<<<< HEAD
     <div class="menu-item size-s" @click="$emit('close')">Баллы: {{ user?.points || 0 }}</div>
     <NuxtLink to="/menu" class="menu-item size-s" @click="$emit('close')">Меню</NuxtLink>
     <NuxtLink to="/menu?mode=order" class="menu-item size-s" @click="$emit('close')">Оформить заказ</NuxtLink>
-=======
-    <div class="menu-item size-s">Баллы: {{ user?.points || 0 }}</div>
-    <NuxtLink to="/menu" class="menu-item size-s">Меню</NuxtLink>
-    <NuxtLink to="/menu?mode=order" class="menu-item size-s">Оформить заказ</NuxtLink>
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 
     <div class="sidebar-image">
       <img class="gif-content" src="/img/higuruma-hiromi-higuruma.gif" alt="Анимация">
@@ -47,7 +36,6 @@ const handleProfileClick = () => {
   emit('openModal')
   emit('close')
 }
-<<<<<<< HEAD
 </script>
 
 <style scoped>
@@ -197,7 +185,3 @@ const handleProfileClick = () => {
   }
 }
 </style>
-=======
-
-</script>
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704

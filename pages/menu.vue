@@ -18,7 +18,7 @@
             :src="item.image || '/img/placeholder.jpg'"
             :alt="item.name"
             class="menu-item-image"
-            @error="(e) => e.target.src = '/img/placeholder.jpg'" loading="lazy"
+            @error="(e) => e.target.src = '/img/placeholder.jpg'" format="webp" loading="lazy"
           />
         </div>
 
@@ -130,7 +130,6 @@ if (process.client) {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 /* ===== Фон страницы ===== */
 .menu-page-wrapper {
   
@@ -181,54 +180,12 @@ if (process.client) {
 }
 
 /* ===== Сетка меню (позиционирование не меняем) ===== */
-=======
-.menu-item-portion {
-  font-size: 0.9rem;
-  color: #777;
-  margin: 4px 0 8px;
-}
-.menu-page-wrapper {
-  padding-left: 20hv;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-
-
-.menu-item-image {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* квадрат */
-  object-fit: cover;   /* обрезает лишнее, сохраняя пропорции */
-  display: block;
-}
-
-.back-link {
-  font-size: 2rem;
-  text-decoration: none;
-  color: #333;
-  display: inline-block;
-}
-.cart-toggle-btn {
-  float: right;
-  padding: 10px 20px;
-  background: #1a1a2e;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.cart-toggle-btn:hover {
-  background: #f0a500;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .menu-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 30px;
 }
-<<<<<<< HEAD
 
 /* ===== Заголовки категорий ===== */
 .category-section-title {
@@ -271,40 +228,12 @@ if (process.client) {
   margin-bottom: 10px;
   border: 1px solid rgba(255, 0, 255, 0.15);
   box-shadow: 0 0 20px rgba(255, 0, 255, 0.05);
-=======
-.category-section-title {
-  grid-column: 1 / -1;
-  font-size: 1.8rem;
-  margin: 20px 0 10px;
-  border-bottom: 2px solid #ccc;
-}
-.menu-card-item {
-  background: white;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-  display: flex;
-  flex-direction: column;
-  height: 100%; 
-}
-
-.menu-item-image-wrapper {
-  width: 100%;
-  /* фиксируем высоту, чтобы картинка не сжималась */
-  aspect-ratio: 1 / 1; /* квадрат */
-  border-radius: 6px;
-  overflow: hidden;
-  flex-shrink: 0; /* чтобы при флексе картинка не сжималась */
-  margin-bottom: 10px;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 .menu-item-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-<<<<<<< HEAD
   transition: transform 0.4s;
 }
 .menu-card-item:hover .menu-item-image {
@@ -339,32 +268,11 @@ if (process.client) {
 }
 
 /* ===== Виджет счётчика ===== */
-=======
-}
-
-.menu-card-item:hover {
-  transform: translateY(-3px);
-}
-.menu-item-category {
-  display: block;
-  font-size: 0.8rem;
-  color: #888;
-}
-.menu-item-title {
-  font-size: 1.2rem;
-  margin: 8px 0 5px;
-}
-.menu-item-price {
-  font-weight: bold;
-  color: #f0a500;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .card-counter-widget {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-top: 10px;
-<<<<<<< HEAD
   background: transparent;
   gap: 6px;
 }
@@ -377,21 +285,10 @@ if (process.client) {
   font-size: 1.2rem;
   font-weight: 700;
   color: #ff7bff;
-=======
-}
-.counter-btn {
-  background: #ddd;
-  border: none;
-  width: 30px;
-  height: 30px;
-  font-size: 1.2rem;
-  border-radius: 50%;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
   transition: all 0.2s;
   box-shadow: 0 0 10px rgba(255, 0, 255, 0.05);
 }
@@ -437,37 +334,14 @@ if (process.client) {
 }
 
 /* ===== Модалка пустой корзины ===== */
-=======
-}
-.counter-btn:hover {
-  background: #bbb;
-}
-.counter-value {
-  margin: 0 10px;
-  font-weight: bold;
-  min-width: 20px;
-  text-align: center;
-}
-.loading, .error, .empty {
-  text-align: center;
-  padding: 40px;
-}
-.error {
-  color: red;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .menu-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   background: rgba(10, 0, 21, 0.85);
   backdrop-filter: blur(4px);
-=======
-  background: rgba(0,0,0,0.5);
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   display: flex;
   justify-content: center;
   align-items: center;
@@ -477,7 +351,6 @@ if (process.client) {
   display: none;
 }
 .menu-modal-box {
-<<<<<<< HEAD
   background: rgba(10, 0, 21, 0.95);
   padding: 30px 32px;
   border-radius: 24px;
@@ -565,31 +438,4 @@ if (process.client) {
     font-size: 1.4rem;
   }
 }
-=======
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 90%;
-  position: relative;
-}
-.menu-modal-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.menu-modal-title {
-  
-  color:#1a1a2e;
-  font-size: 1.5rem;
-}
-.menu-modal-text {
-  color:#1a1a2e;
-  margin-top: 10px;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 </style>

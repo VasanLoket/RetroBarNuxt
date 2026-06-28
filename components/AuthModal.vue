@@ -92,30 +92,16 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 /* ===== Оверлей (затемнение) ===== */
-=======
-.modal-close{
-  
-  color: #333;
-}
-.modal-title{
-  color: #f0f0f0;
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   background: rgba(10, 0, 21, 0.85);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-=======
-  background: rgba(0,0,0,0.5);
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   display: none;
   justify-content: center;
   align-items: center;
@@ -124,24 +110,16 @@ const handleSubmit = async () => {
 .modal-overlay.active {
   display: flex;
 }
-<<<<<<< HEAD
 
 /* ===== Бокс модалки ===== */
 .modal-box {
   background: rgba(10, 0, 21, 0.95);
   padding: 30px 32px;
   border-radius: 24px;
-=======
-.modal-box {
-  background: #1a1a2e;
-  padding: 30px;
-  border-radius: 8px;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   max-width: 400px;
   width: 100%;
   position: relative;
   margin: 20px;
-<<<<<<< HEAD
   border: 2px solid rgba(255, 0, 255, 0.6);
   box-shadow:
     0 0 40px rgba(255, 0, 255, 0.4),
@@ -280,27 +258,5 @@ const handleSubmit = async () => {
     font-size: 1rem;
     padding: 12px;
   }
-=======
-}
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.hidden {
-  display: none;
-}
-.switch-link {
-  cursor: pointer;
-  color: #f0a500;
-  text-decoration: underline;
-}
-.switch-link:hover {
-  color: #d48900;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 </style>

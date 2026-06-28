@@ -110,21 +110,14 @@ import { useUser } from '~/composables/useUser'
 const { user } = useUser()
 const gridRef = ref(null)
 
-<<<<<<< HEAD
 // Состояния модалки
-=======
-// Состояния
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 const modalOpen = ref(false)
 const modalTitle = ref('Номер стола')
 const selectedTableId = ref(null)
 const bookingDate = ref('')
 const bookingTime = ref('')
 
-<<<<<<< HEAD
 // Минимальные дата и время (для валидации)
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 const minDate = computed(() => {
   const now = new Date()
   return now.toISOString().split('T')[0]
@@ -141,11 +134,7 @@ const minTime = computed(() => {
   return `${hours}:${mins}`
 })
 
-<<<<<<< HEAD
 // Данные о столиках (занятость)
-=======
-// Столики
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 const tables = ref({})
 
 const initializeTables = () => {
@@ -158,10 +147,7 @@ const initializeTables = () => {
     } catch (e) {}
   }
 
-<<<<<<< HEAD
   // Инициализация случайными занятыми столами (для демонстрации)
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   const ids = [
     'bar-0', 'bar-1', 'bar-2', 'bar-3', 'bar-4', 'bar-5', 'bar-6',
     'center-1', 'center-2',
@@ -190,18 +176,12 @@ const saveTables = () => {
   localStorage.setItem('bookingTables', JSON.stringify(tables.value))
 }
 
-<<<<<<< HEAD
 // Проверка, занят ли стол
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 const isTableOccupied = (id) => {
   return tables.value[id]?.occupied || false
 }
 
-<<<<<<< HEAD
 // Проверка, забронирован ли стол текущим пользователем
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 const isBookedByMe = (id) => {
   if (!user.value) {
     console.log('⚠️ Пользователь не авторизован')
@@ -213,10 +193,7 @@ const isBookedByMe = (id) => {
   return result
 }
 
-<<<<<<< HEAD
 // Открыть модалку для брони
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 const openBookingModal = (tableId) => {
   if (isTableOccupied(tableId)) return
   selectedTableId.value = tableId
@@ -258,10 +235,7 @@ const confirmBooking = () => {
   alert(`✅ Стол ${tableId} забронирован на ${bookingDate.value} в ${bookingTime.value}`)
 }
 
-<<<<<<< HEAD
 // Обработка клика по схеме
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 onMounted(() => {
   initializeTables()
   if (gridRef.value) {
@@ -280,7 +254,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 /* ===== Фон страницы ===== */
 .booking-page-wrapper {
   max-width: 100%;
@@ -405,32 +378,10 @@ onMounted(() => {
   box-shadow:
     0 0 30px rgba(0, 255, 0, 0.4),
     inset 0 0 20px rgba(0, 255, 0, 0.1);
-=======
-
-.booking-modal-title{
-  color: #1a1a2e;
-}
-/* Статусы столиков */
-.occupied {
-  background-color: #d9534f !important;
-  opacity: 0.7;
-  cursor: not-allowed;
-  pointer-events: none;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
-}
-.occupied .chair-circle {
-  background-color: #a94442 !important;
-}
-
-.booked-by-me {
-  border: 4px solid #5cb85c !important;
-  background-color: #dff0d8 !important;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   cursor: default;
   pointer-events: none;
 }
 .booked-by-me .chair-circle {
-<<<<<<< HEAD
   background: rgba(70, 255, 70, 0.3) !important;
   border-color: #44ff44 !important;
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
@@ -457,36 +408,22 @@ onMounted(() => {
 }
 
 /* ===== Модалка – неоновая ===== */
-=======
-  background-color: #5cb85c !important;
-}
-
-/* Стили модалки */
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .booking-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
-=======
-  background: rgba(0,0,0,0.6);
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 2000;
-<<<<<<< HEAD
   backdrop-filter: blur(4px);
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 .booking-modal-overlay.active {
   display: flex;
 }
 .booking-modal-box {
-<<<<<<< HEAD
   padding: 30px 32px;
   border-radius: 24px;
   max-width: 440px;
@@ -503,21 +440,11 @@ onMounted(() => {
   box-shadow:
     0 0 60px rgba(255, 0, 255, 0.6),
     0 0 100px rgba(0, 255, 255, 0.4);
-=======
-  background: #1a1a2e;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 90%;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 .booking-modal-close {
   position: absolute;
   top: 12px;
   right: 18px;
-<<<<<<< HEAD
   font-size: 30px;
   background: none;
   border: none;
@@ -543,28 +470,10 @@ onMounted(() => {
   display: flex;
   gap: 16px;
   margin-bottom: 24px;
-=======
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.booking-modal-title {
-  margin-top: 0;
-  color: #f0f0f0;
-  margin-bottom: 20px;
-}
-.booking-datetime-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 .booking-datetime-field {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   align-items: center;      
   flex: 0 1 auto;           
   min-width: 140px; 
@@ -599,61 +508,10 @@ onMounted(() => {
 .booking-datetime-field input::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
-=======
-  align-items: flex-start;
-  width: 100%;
-}
-.booking-datetime-container {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-.booking-datetime-field {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.booking-datetime-field label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 0.9rem;
-}
-.booking-datetime-field input {
-  width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  background: #f9f9f9;
-  box-sizing: border-box;
-}
-.booking-datetime-field input:focus {
-  outline: none;
-  border-color: #f0a500;
-}
-.booking-datetime-field label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 0.9rem;
-}
-.booking-datetime-field input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  background: #f9f9f9;
-}
-.booking-datetime-field input:focus {
-  outline: none;
-  border-color: #f0a500;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 .booking-confirm-btn {
   display: block;
   width: 100%;
-<<<<<<< HEAD
   padding: 14px;
   background: transparent;
   border: 2px solid rgba(255, 0, 255, 0.5);
@@ -729,19 +587,5 @@ onMounted(() => {
   .booking-modal-box {
     padding: 16px 12px;
   }
-=======
-  padding: 12px;
-  background: #1a1a2e;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.booking-confirm-btn:hover {
-  background: #f0a500;
-  color: #1a1a2e;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 </style>

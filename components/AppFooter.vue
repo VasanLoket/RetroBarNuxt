@@ -1,6 +1,5 @@
 <template>
   <footer class="page-section page-bg-5 fifth-screen">
-<<<<<<< HEAD
     <div class="grid-footer">
       <!-- Первая строка: подписи категорий -->
       <div class="footer-label">📍 Адреса заведений</div>
@@ -42,18 +41,11 @@
           <li>🕹️ Игровая зона до последнего клиента</li>
         </ul>
       </div>
-=======
-    <div class="flex-container-footer">
-      <div class="card footer-card">Адреса заведений</div>
-      <div class="card footer-card">Соц сети и номера телефонов</div>
-      <div class="card footer-card">Время работы</div>
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
     </div>
   </footer>
 </template>
 
 <script setup>
-<<<<<<< HEAD
 </script>
 
 <style scoped>
@@ -187,11 +179,4 @@
     padding: 4px 12px;
   }
 }
-=======
-
-</script>
-
-<style scoped>
-
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 </style>

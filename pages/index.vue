@@ -3,11 +3,8 @@
   <section class="page-section page-bg-1">
     <div class="main-content">
       <h1 class="main-title">Retrowave Bar</h1>
-<<<<<<< HEAD
       <!-- Добавляем подпись RETROWAVE -->
       <div class="retro-label">RETROWAVE</div>
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
     </div>
   </section>
 
@@ -23,32 +20,25 @@
         - отличная компания
         #олдытут! Приходи с друзьями и окунись в атмосферу 80х-90х-00х годов
       </div>
-<<<<<<< HEAD
       <div class="card photo-card">
-        <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="card photo-card">
-        <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="card photo-card">
-        <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="card photo-card">
-        <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px; ">
+        <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px; ">
       </div>
-=======
-      <div class="card photo-card">Фото 1</div>
-      <div class="card photo-card">Фото 2</div>
-      <div class="card photo-card">Фото 3</div>
-      <div class="card photo-card">Фото 4</div>
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
     </div>
   </section>
 
   <!-- Третий блок -->
   <section class="page-section page-bg-3 third-screen">
     <div class="grid-container-beer">
-<<<<<<< HEAD
       <div class="card photo-card">
         <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
@@ -61,12 +51,6 @@
       <div class="card photo-card">
         <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
-=======
-      <div class="card photo-card">Фото 1</div>
-      <div class="card photo-card">Фото 2</div>
-      <div class="card photo-card">Фото 3</div>
-      <div class="card photo-card">Фото 4</div>
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
       <div class="beer-block beer-block--list">
         <h3>🍺 Пиво — всерьёз:</h3>
         <ul>
@@ -93,7 +77,6 @@
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 
 /* ===== Основной контейнер для первого блока ===== */
 .main-content {
@@ -351,6 +334,4 @@
     letter-spacing: 0.3em;
   }
 }
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 </style>

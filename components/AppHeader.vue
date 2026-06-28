@@ -41,7 +41,6 @@ defineEmits(['toggleSidebar'])
   margin-left: 15px;
 }
 
-<<<<<<< HEAD
 .burger-menu:hover {
   box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
 }
@@ -61,30 +60,5 @@ defineEmits(['toggleSidebar'])
 .burger-menu:hover span {
   background-color: #88ddff;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-=======
-.burger-menu {
- 
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 5px;
-}
-
-.burger-menu span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
-/* Можно добавить анимацию при наведении */
-.burger-menu:hover span {
-  background-color: #f0a500;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 </style>

@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-<<<<<<< HEAD
   css: ['~/public/css/main.css'],
   devServer: {
     host: '0.0.0.0',
@@ -19,8 +18,22 @@ export default defineNuxtConfig({
       ssr: false,
     },
   },
-
-=======
-  css: ['~/public/css/main.css']
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
+  nitro: {
+    routeRules: {
+      // Главная — статическая (генерируется при сборке)
+      '/': { prerender: true },
+      
+      // Страницы, которые редко меняются — SWR-кеш на 1 час
+      '/menu': { swr: 3600 },
+      '/account': { swr: 3600 },
+      
+      // Страницы с динамическими данными (бронирование, корзина) — SSR без кеша
+      '/booking': { ssr: true },
+      '/cart': { ssr: true },
+      '/payment': { ssr: true },
+      
+      // API-маршруты — без кеша
+      '/api/**': { cors: true },
+    }
+  }
 })

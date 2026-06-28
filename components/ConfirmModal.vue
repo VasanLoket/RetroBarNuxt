@@ -28,35 +28,24 @@ const confirm = () => {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 /* ===== Оверлей (фон) ===== */
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .confirm-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   background: rgba(10, 0, 21, 0.85); /* тёмный, как у других модалок */
-=======
-  background: rgba(0,0,0,0.5);
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 3000;
-<<<<<<< HEAD
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-=======
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 .confirm-modal-overlay.active {
   display: flex;
 }
-<<<<<<< HEAD
 
 /* ===== Контейнер модалки ===== */
 .confirm-modal-box {
@@ -79,22 +68,10 @@ const confirm = () => {
 }
 
 
-=======
-.confirm-modal-box {
-  background: #1a1a2e;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 90%;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 .confirm-modal-close {
   position: absolute;
   top: 12px;
   right: 18px;
-<<<<<<< HEAD
   font-size: 30px;
   background: none;
   border: none;
@@ -201,48 +178,5 @@ const confirm = () => {
     padding: 12px;
     min-width: unset;
   }
-=======
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #f0f0f0;
-}
-.confirm-modal-title {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #f0f0f0;
-}
-.confirm-modal-message {
-  margin-bottom: 20px;
-  color: #f0f0f0;
-}
-.confirm-modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-.confirm-btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.confirm-btn.cancel {
-  background: #eee;
-  color: #333;
-}
-.confirm-btn.cancel:hover {
-  background: #ddd;
-}
-.confirm-btn.confirm {
-  background: #d9534f;
-  color: white;
-}
-.confirm-btn.confirm:hover {
-  background: #c9302c;
->>>>>>> 5bf747f2def4d26a116afcbcfc421fdc493df704
 }
 </style>
