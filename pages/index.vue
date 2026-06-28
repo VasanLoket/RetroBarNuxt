@@ -24,14 +24,13 @@
         <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="card photo-card">
-        <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img  src="/img/photo-2.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="card photo-card">
-        <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img  src="/img/photo-3.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="card photo-card">
-        <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px; ">
-        <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px; ">
+        <img  src="/img/photo-4.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px; ">
       </div>
     </div>
   </section>
@@ -40,16 +39,16 @@
   <section class="page-section page-bg-3 third-screen">
     <div class="grid-container-beer">
       <div class="card photo-card">
-        <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img src="/img/photo-5.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="card photo-card">
-        <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img src="/img/photo-6.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="card photo-card">
-        <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img src="/img/photo-7.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="card photo-card">
-        <img src="/img/test.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+        <img src="/img/photo-8.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
       </div>
       <div class="beer-block beer-block--list">
         <h3>🍺 Пиво — всерьёз:</h3>

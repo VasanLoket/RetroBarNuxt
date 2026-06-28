@@ -10,15 +10,14 @@
     />
 
     <div class="payment-map-box" id="map-mock">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2212.60681349326!2d43.982729313086466!3d56.319358773187844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d5898f08eb2f%3A0xc1152e2a90a20d0c!2z0JvQtdC70YzQutC-0LI!5e0!3m2!1sru!2sru!4v1781247190489!5m2!1sru!2sru"
-        width="600"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d552.9960959695928!2d43.991791078504164!3d56.33009954356144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d54a08166c15%3A0xd4c9f21d360f7238!2sretrowave%20bar!5e0!3m2!1sru!2sru!4v1782649598710!5m2!1sru!2sru" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>      
     </div>
 
     <div class="payment-buttons-row">
