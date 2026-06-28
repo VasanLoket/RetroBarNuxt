@@ -12,13 +12,15 @@
   <section class="page-section page-bg-2 second-screen">
     <div class="grid-container">
       <div class="card about-card">
-        Уютный бар для GEEKов и для тех, кто скучает по посиделкам с друзьями у сеги 👾
-        - холодное пенное
-        - редкий крафт
-        - ретро-игры
-        - отличные закуски
-        - отличная компания
-        #олдытут! Приходи с друзьями и окунись в атмосферу 80х-90х-00х годов
+        <h3>Уютный бар для GEEKов и для тех, кто скучает по посиделкам с друзьями у сеги 👾</h3>
+          <ul>
+            <li>❄️ - холодное пенное</li>
+            <li>🔥 - редкий крафт</li>
+            <li>🍟 - отличные закуски</li>
+            <li>🎮 - отличная компания</li>
+            <li>👾 - ретро-игры</li>
+            <li class="hashtag">#олдытут! Приходи с друзьями и окунись в атмосферу 80х-90х-00х годов</li>
+          </ul>
       </div>
       <div class="card photo-card">
         <img  src="/img/test.jpg" alt="описание" format="webp" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
@@ -171,9 +173,63 @@
 
 /* ===== Текстовый блок about-card ===== */
 .about-card {
-  /* никаких дополнительных позиций – сетка определяется глобально */
-  white-space: pre-line;
-  padding: 30px;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 2px solid rgba(255, 0, 255, 0.6);
+  border-radius: 20px;
+  padding: 30px 28px;
+  color: #e0d0ff;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.6);
+}
+
+.about-card h3 {
+  font-size: 1.3rem;
+  color: #ff7bff;
+  text-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+  margin-bottom: 16px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.about-card ul li {
+  padding-left: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.about-card ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-card .hashtag {
+  color: #88ddff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  font-style: italic;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 /* ===== Фото-карточки ===== */
