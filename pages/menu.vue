@@ -26,7 +26,7 @@
         <h3 class="menu-item-title">{{ item.name }}</h3>
         <span class="menu-item-price">{{ item.price }} ₽</span>
 
-        <!-- Блок порции (добавленный ранее) -->
+        <!-- Блок порции -->
         <div v-if="item.portion_value && item.portion_unit" class="menu-item-portion">
           {{ item.portion_value }} {{ item.portion_unit }}
         </div>
